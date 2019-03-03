@@ -1,0 +1,10 @@
+.navLink {
+    text-decoration: none;
+
+}
+.navLink:hover{
+    text-decoration: none;
+}
+#navBar {
+    background-color: #D80000;
+}
