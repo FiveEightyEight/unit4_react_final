@@ -31,7 +31,9 @@ class Home extends Component {
     handleEnter = (e) => {
         if (e.keyCode === 13) {
             this.handleSearch()
+            return;
         }
+        return;
     }
 
     handleSearch = (e) => {
@@ -56,6 +58,7 @@ class Home extends Component {
             .catch(err => {
                 console.log('Error Loading Search: ', err)
             })
+        return;
     }
 
     handleLoading = () => {
@@ -76,22 +79,16 @@ class Home extends Component {
                     {this.state.searchResults.map((e, i) => {
                         return (
                             <div className='col-6 p-2' key={i}>
-                                <Link to={'/video/' + e.videoId} style={{color: '#000'}}>
+                                <Link to={'/video/' + e.videoId} style={{ color: '#000' }}>
                                     <VideoBlock video={e} />
                                 </Link>
                             </div>
                         )
                     })}
                 </div>
-
             )
         }
     }
-    componentDidUpdate(p, s) {
-        console.log('Previous State: ', s)
-        console.log(this.state)
-    }
-
 
     render() {
         const noSearch = (

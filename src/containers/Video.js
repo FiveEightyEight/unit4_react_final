@@ -61,7 +61,7 @@ class Video extends Component {
             comment: '',
             comments: newComments,
         })
-
+        return;
     }
 
     renderComments = () => {
@@ -86,11 +86,6 @@ class Video extends Component {
             videoID: video_id,
             comments: [],
         })
-    }
-
-    componentDidUpdate(p, s) {
-        console.log('Previous State: ', s)
-        console.log(this.state)
     }
 
     render() {
